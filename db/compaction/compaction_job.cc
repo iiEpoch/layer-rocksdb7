@@ -1703,7 +1703,7 @@ void CompactionJob::RecordCompactionIOStats() {
 Status CompactionJob::OpenCompactionOutputFile(SubcompactionState* sub_compact,
                                                CompactionOutputs& outputs) {
   assert(sub_compact != nullptr);
-  if(sub_compact->compaction->output_level()<=1)
+  if(sub_compact->compaction->output_level()<=3)
     {
       sub_compact->compaction->setpath_0();
     }
